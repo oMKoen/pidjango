@@ -1,0 +1,74 @@
+{   "Rolluik_identifier":  {
+        "version": "v0.0",
+        "config": "Rolluik_Io",
+        "settings": {
+            "commInterval": "",
+            "watchdog": ""
+        }
+    },
+    
+
+
+    "Rolluik_IO": {
+        "version": "v0.0",
+        "config": [
+            {"limitSwitch": "v0.0"},
+            {"limitSwitch": "v0.0"},
+            {"dcMotor": "v0.0"}
+        ],
+        "settings": {
+            
+        }
+    },
+
+    "limitSwitch": {
+        "version": "v0.0",
+        "config": {
+            "hardware": {
+                "type": "",
+                "version": ""
+            },
+            "software": {
+                "class": "Button",
+                "version": "v0.0"
+            },
+            "communication": {
+                "identifier": "digitalInput",
+                "version": "v0.0"
+            }
+        },
+        "settings": {
+            
+        }
+    },
+
+    "digitalInput": {
+        "version": "v0.0",
+        "software": {
+            "class": "DigitalInput",
+            "version": "v0.0"
+        },
+        "hardware": {
+            "pinNr": "19"
+        },
+        "settings": {
+
+        }
+    },
+    
+    "serial": {
+        "version": "v0.0",
+        "software": {
+            "class": "Serial",
+            "version": "v0.0"
+        },
+        "hardware": {
+            "txPin": "1",
+            "rxPin": "2"
+        },
+        "settings": {
+            "baudRate": "51200"
+        }
+    }
+}
+
