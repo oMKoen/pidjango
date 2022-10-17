@@ -1,7 +1,6 @@
-#import django
-#django.setup()
 from django.db import models
 
+from .Shellies.models import *
 # Create your models here.
 
 # Base structure for Configurations

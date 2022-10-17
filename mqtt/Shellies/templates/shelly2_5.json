@@ -1,0 +1,62 @@
+{
+    "mqtt": {
+        "topic":    "shellies/shellyswitch25-<deviceid>",
+        "subscribe":    {
+            "subtopic": [
+                {   "general": [   
+                        "input/<i>",
+                        "temperature",
+                        "overtemperature",
+                        "temperature_status",
+                        "voltage"
+                    ]
+                },
+                {   "relay":  [
+                        "longpush/<i>",
+                        "input_event/<i>",
+                        "relay/<i>",
+                        "relay/<i>/power",
+                        "relay/<i>/energy",
+                        "relay/<i>/overpower_value"
+                    ] 
+                },
+                {   "roller":  [
+                        "roller/0",
+                        "roller/0/power",
+                        "roller/0/energy",
+                        "roller/0/pos"
+                    ]
+                }
+            ]
+        },
+        "publish":  {
+            "subtopic": [
+                {   "relay_mode": [
+                        {    "relay/<i>/command": [
+                                "on",
+                                "off",
+                                "toggle"
+                            ]
+                        }
+                    ]
+                },
+                {   "roller_mode":  [
+                        {   "roller/0/command": [
+                                "rc",
+                                "open",
+                                "close",
+                                "stop"
+                            ]
+                        },
+                        {   "roller/0/command/pos": [
+                                0,
+                                100
+                            ]
+                        }
+                    ]
+
+                }
+            ]
+        }
+    }
+}

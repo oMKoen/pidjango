@@ -1,0 +1,18 @@
+{   "device_id":    "",
+    "device_name":  "",
+    "location": "",
+    "version":  "",
+    "device_type": "",
+    "firmware_version": "",
+    "ip_address":   "",
+    "mqtt_id":  "",
+    "mode": "",
+    "streams": [
+        {"input/0": "enable"},
+        {"input/0": "enable"},
+        {"temperature": "enable"},
+        {"overtemperature": "enable"},
+        {"temperature_status": "enable"},
+        {"voltage": "enable"}
+    ]
+}
