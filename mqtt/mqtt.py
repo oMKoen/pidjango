@@ -3,6 +3,7 @@ from .models import Sensor
 from . import IotModules
 from decimal import *
 import json
+from .Shellies.views import *
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -10,6 +11,10 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("raspberry")
     client.subscribe("raspberry/mai")   #module alive interval
     
+    ShelliesSubscribes = getShellySubscribeTopics()
+    for sub in ShelliesSubscribes:
+        client.subscribe(sub)
+
 def on_message(client, userdata, msg):    
     try:
         data = msg.payload.decode()

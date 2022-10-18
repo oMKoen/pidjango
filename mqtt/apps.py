@@ -7,4 +7,4 @@ class MqttConfig(AppConfig):
 
     def ready(self):
         from . import mqtt
-        #mqtt.client.loop_start()
+        mqtt.client.loop_start()
